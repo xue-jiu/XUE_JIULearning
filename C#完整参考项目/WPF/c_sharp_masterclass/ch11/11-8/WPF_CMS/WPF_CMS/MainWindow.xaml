@@ -1,0 +1,47 @@
+﻿<Window x:Class="WPF_CMS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_CMS" 
+        xmlns:controls="clr-namespace:WPF_CMS.Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240"/>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <!--header-->
+        <controls:HeaderControl Grid.ColumnSpan="3"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Button Content="添加客户"/>
+            <ListView />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock Text="姓名" Margin="10 10 10 0"/>
+            <TextBox Margin="10" />
+            <TextBlock Text="身份证" Margin="10 10 10 0"/>
+            <TextBox Margin="10" />
+            <TextBlock Text="地址" Margin="10 10 10 0"/>
+            <TextBox Margin="10" />
+            <Button Content="保存" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <ListView />
+            <TextBlock Text="添加新预约" />
+            <DatePicker Margin="10" />
+            <Button Content="预约" />
+        </StackPanel>
+        
+    </Grid>
+</Window>
